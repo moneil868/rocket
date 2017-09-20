@@ -17,6 +17,11 @@ class RocketTest < Minitest::Test
     assert_equal "Test Colour", rocket.colour
   end
 
+  def test_flying?
+    rocket = Rocket.new
 
+    assert_equal false, rocket.flying?
+
+  end
 
 end
