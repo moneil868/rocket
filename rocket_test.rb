@@ -8,8 +8,15 @@ class RocketTest < Minitest::Test
     rocket = Rocket.new
     rocket.name = "Test Name"
     assert_equal "Test Name", rocket.name
-
   end
+
+
+  def test_colour=()
+    rocket = Rocket.new
+    rocket.colour = "Test Colour"
+    assert_equal "Test Colour", rocket.colour
+  end
+
 
 
 end
