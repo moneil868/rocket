@@ -37,4 +37,9 @@ class RocketTest < Minitest::Test
     assert_equal true, rocket.land
   end
 
+  def test_land_when_not_flying
+    rocket = Rocket.new
+    assert_equal false, rocket.land
+  end
+
 end
