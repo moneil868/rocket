@@ -24,14 +24,17 @@ class RocketTest < Minitest::Test
 
   def test_lift_off_if_not_flying
     rocket = Rocket.new
-  
     assert_equal true, rocket.lift_off
   end
 
   def test_lift_off_if_flying
     rocket = Rocket.new(:flying => true)
-
     assert_equal false, rocket.lift_off
+  end
+
+  def test_land_when_flying
+    rocket = Rocket.new(:flying => true)
+    assert_equal true, rocket.land
   end
 
 end
